@@ -5,7 +5,7 @@ function addItem()
 {
   var newItem;
   newItem = document.getElementById("price").value;
-  if(newItem.isNaN()){
+  if(newItem.isNaN() === false){
   	alert("Your input is not a number. Enter a number.");
   } else{
   	newItem = Number(newItem);
