@@ -1,11 +1,19 @@
 var runningTotal = 0.0;
 
+
 function addItem()
 {
   var newItem;
   newItem = document.getElementById("price").value;
   if(newItem.isNaN()){
   	alert("Your input is not a number. Enter a number.");
+  } else{
+  	newItem = Number(newItem);
+  	runningTotal += newItem;
+  	var dollars = asCurrency(runningTotal);
+  	document.getElementById("subtotal").innerHTML = dollars;
+  	document.getElementById("price").innerHTML = "";
+  	document.getElementById("preTax").innerHTML = runningTotal;
   }
   //IF newItem is not a number
   // THEN show an alert: "Enter price as a number"
